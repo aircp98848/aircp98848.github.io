@@ -1,0 +1,218 @@
+body{
+/*	background-color: black;*/
+/*	width: 1366px;*/
+	background-image: url(6.png);
+
+
+
+/*background: #FFEBCD; */
+
+}
+
+/*
+#banner{
+	background-color:black;
+	background-image:url("banner.png");
+	min-width:100%;
+
+	height: 491px;
+
+}
+*/
+/*
+#banner h1{
+	font-family: "Oswald:700";
+	text-align: center;
+	vertical-align: middle;
+}
+*/
+
+header{
+	height: 50px;
+	background-color: #ffa250;
+	width: 1250px;
+	margin:0px auto;
+
+}
+
+
+#banner{
+	background-image:url("banner.png");
+/*	min-width:100%;*/
+	width: 1250px;
+	height: 491px;
+    margin:0px auto;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size: 30px;
+	color: #1b1d71;
+	text-shadow: 0px 2px 3px #555;
+
+}
+
+/*button*/
+
+.applybutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+	background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+	background-color:#ffc477;
+	-webkit-border-top-left-radius:25px;
+	-moz-border-radius-topleft:25px;
+	border-top-left-radius:25px;
+	-webkit-border-top-right-radius:25px;
+	-moz-border-radius-topright:25px;
+	border-top-right-radius:25px;
+	-webkit-border-bottom-right-radius:25px;
+	-moz-border-radius-bottomright:25px;
+	border-bottom-right-radius:25px;
+	-webkit-border-bottom-left-radius:25px;
+	-moz-border-radius-bottomleft:25px;
+	border-bottom-left-radius:25px;
+	text-indent:0px;
+	border:2px solid #eeb44f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:26px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:179px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #cc9f52;
+}
+.applybutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
+	background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
+	background-color:#fb9e25;
+}.applybutton:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+
+
+
+
+/*
+#bannerout{
+	padding-top: 50px;
+}
+
+/*
+#coursename{
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+*/
+
+#topic{
+	text-align: center;
+    height: 220px;
+    text-shadow: 0px 2px 3px #555;
+	font-family: 'Oswald', sans-serif;
+	color: #008080;
+
+}
+
+
+#allthings{
+	width: 1250px;
+	margin:0px auto;
+	background: white;
+
+}
+
+
+#allcontent{
+	display: table;
+	border-spacing: 10px;
+	width: 1050px;
+    margin:0px auto;
+}
+
+#tableRow{
+	display:table-row;
+
+}
+
+
+footer{
+/*	width: 920px;*/
+	height: 30px;
+	color:white;
+	text-align: center;
+	font-size: 22px;
+}
+
+h2{
+	font-size: 18px;
+	color:#1b1d71;
+}
+
+/*
+table{
+	border: 1px solid gray;
+	border-collapse:collapse;
+}
+
+th{
+	color:#483D8B;
+}
+
+th,td{
+	border: 1px solid #ADD8E6;
+}
+*/
+
+#rightone{
+	background-color: white;
+	display: table-cell;
+	padding:15px;
+    vertical-align: top;
+    width: 100px;
+    border: 2px #DB7093 dotted;
+    border-radius: 30px;
+}
+
+#rightone:hover{
+	border: 2px #B22222 solid;
+}
+
+#leftone{
+	background-color: white;
+	display:table-cell;
+	padding:15px;
+	vertical-align:top;
+/*	border-right: dotted 2px gray;*/
+	width: 800px;
+    border: 2px #DB7093 dotted;
+	border-radius: 30px;
+}
+
+#leftone:hover{
+	border: 2px #B22222 solid;
+}
+
+#middle{
+	background-color: white;
+	display: table-cell;
+	padding:15px;
+    vertical-align: top;
+/*	border-right: dotted 2px gray;*/
+	width: 1000px;
+    border: 2px #DB7093 dotted;
+	border-radius: 30px;
+}
+
+#middle:hover{
+	border: 2px #B22222 solid;
+}

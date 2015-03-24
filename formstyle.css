@@ -1,19 +1,44 @@
 body{
-	background-color: #CAE5CA;
+	background-image: url(6.png);
  
 }
 
 #all{
-	background: #FFFFCC;
-	width: 600px;
-	margin-right: auto;
-	margin-left: auto;
+	background: white;
+	width: 900px;
+    margin:0px auto;
 }
 
-p{
-	color:#191970;
+header{
+	height: 50px;
+	background-color: #ffa250;
+	margin: 0px auto;
 }
+ 
 
 h1{
 	color:#191970;
+	margin: 0px auto;
+	font-family: 'Oswald', sans-serif;
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+h2{
+	font-size: 18px;
+	color:#191970;
+}
+
+table{
+	width: 400px;
+	margin: 0px auto;
+}
+
+#title{
+	text-align: center;
+	margin: 0px auto;
+}
+
+.q:hover{
+    border: 2px #20B2AA dotted;
 }

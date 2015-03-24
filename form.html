@@ -4,39 +4,55 @@
 	<meta charset="utf-8">
 	<title>Application form</title>
 	<link type="text/css" rel="stylesheet" href="formstyle.css">
+
+	 <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<div id="all">
-	<table width="600">
+     
+    <header>
+    	<p></p>
+    </header>
+
+	<div id="title">
+	<h1>Application Form</h1>
+    </div>
+
+	<div id="allthings">
+	<table>
 	<tr>
 	<td align="center">
-	<h1>Application Form</h1>
-	<p>
-		1.姓名：<br><br><input type="text" name="name"><br><br>
-		2.學號：<br><br><input type="text"><br><br>
-		3.學系：<br><br><input type="text" name="major"><br><br>
-		4.年級：<br><br>
+	
+		<div class="q"><h2>&#9830; 姓名：<br><br></h2><p><input type="text" name="name"><br><br></p></div>
+		<div class="q"><h2>&#9830; 學號：<br><br></h2><p><input type="text"><br><br></p></div>
+		<div class="q"><h2>&#9830; 學系：<br><br></h2><p><input type="text" name="major"><br><br></p></div>
+		<div class="q"><h2>&#9830; 年級：</h2><br><br>
+		<p>
 		  <select name="grade">
 		  	<option value="1">一</option>
 		  	<option value="2">二</option>
 		  	<option value="3">三</option>
 		  	<option value="4">四</option>
-		  </select><br><br>
-		5.性別：<br><br>
+		  </select><br><br></p></div>
+		<div class="q"><h2>&#9830; 性別：</h2><br><br>
+		<p>
 		  <img src="male.png"><img src="female.png"><br>
 		  <input type="radio" name="gender" value="male">Male
-		  <input type="radio" name="gender" value="female">Female<br><br>
-		6.Email<br><br><input type="email"><br><br>
-		7.手機：<br><br><input type="tel" name="phone"><br><br>
-		8.修課動機：<br><br>
-		  <textarea name="comments" rows="10" cols="48"></textarea><br><br>
-		  <input type="submit">
+		  <input type="radio" name="gender" value="female">Female<br><br></p></div>
+		<div class="q"><h2>&#9830; Email<br><br></h2><p><input type="email"><br><br></p></div>
+		<div class="q"><h2>&#9830; 手機：<br><br></h2><p><input type="tel" name="phone"><br><br></p></div>
+		<div class="q"><h2>&#9830; 修課動機：</h2><br><br>
+		<p>
+		  <textarea name="comments" rows="10" cols="48"></textarea><br><br></p></div>
+		<p>  <input type="submit"></p>
 
     </td>
     </tr>
 
-	</p>
+	
     </div>
+    </div>
+
 </body>
 </html>
