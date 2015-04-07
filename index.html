@@ -3,6 +3,13 @@
  <head>
   <title>課程詳細資料</title>
   <meta charset="utf-8">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
   <link type="text/css" rel="stylesheet" href="course.css">
 
   <!--banner topic font-->
@@ -13,33 +20,77 @@
 
  </head>
 
+
  <body>
-
-
     <header>
-        <p></p>
     </header>
 
-    <div id="allthings">
-    
-    <div id="bannerout">
+<div class="jumbotron">
+
     <div id="banner">
-        <br>
-        <span id="coursename"><h1>Web Programing</h1></span>
+        <h1>Web Programing</h1>
         <p>Come to join us</p><br>
         <a href="form.html" target="_blank" class="applybutton">Apply</a>
     </div><!--banner-->
     </div>
     <!--
 -->
+</div>
+
      <div id="topic">
-        <br><br><br>
+        <br><br><br><br><br><br>
         <h1>About the course</h1>
-    </div>     
+    </div>
+    
+    <div id="all">
+    <div class="row">
 
-    <div id="allcontent">
-    <div id="tableRow"> 
+    <div class="col-md-3"><p></p></div>
 
+    <div id="CourseDescription">
+        <div class="col-md-6">
+        <h1>課程大綱 Course Description</h1><br>
+
+        <table class="table table-hover">
+        <tbody>
+            <tr>
+        
+            <td>Course Introduction</td>
+            <tr><td>HTML5</tr></td>
+            <tr><td>CSS3 (I)</tr></td>
+            <tr><td>CSS3 (II) </tr></td>
+            <tr><td>IA - Analysis </tr></td>
+            <tr><td>Grid system / bootstrap </tr></td>
+            <tr><td>IA presentation </tr></td>
+            <tr><td>Responsive design </tr></td>
+            <tr><td>Midterm </tr></td>
+            <tr><td>Javascript (I) / DOM </tr></td>
+            <tr><td>Javascript (II) / JQuery </tr></td>
+            <tr><td>Parse / JSON</tr></td>
+            <tr><td>校慶運動會 </tr></td>
+            <tr><td>Heroku / Node.js </tr></td>
+            <tr><td>Websocket </tr></td>
+            <tr><td>Guest speaker </tr></td>
+            <tr><td>Google Analytics </tr></td>
+            <tr><td>Final demo </tr></td>
+        </ol>
+
+
+    </table>
+    </div>
+    </div>
+
+    <div class="col-md-3"><p></p></div>
+
+    </div><!--row-->     
+
+    <div id="content">
+
+    <div class="row"> 
+
+    <div class="col-md-1"><p></p></div>
+
+    <div class="col-md-3">
     <div id="leftone">
     <p>
     <h2>學年/學期 Academic Year/Semester</h2>
@@ -67,7 +118,9 @@
     限學程同學方得修習。 
     </p>
     </div><!--leftone-->
+    </div><!--col-->
     
+    <div class="col-md-4">
     <div id="middle">
     <p>
     <h2>課程目標 Course objectives</h2><br>
@@ -76,7 +129,7 @@
     本課程旨在介紹WWW的基本運作原理並以其為平台開發應用程式，包含HTML5/CSS3動態網頁製作、網頁物件模型(DOM)、JavaScript程式設計與雲端應用等。<br>
     
     
-    <h2>課程大綱 Course Description</h2>
+<!--    <h2>課程大綱 Course Description</h2>
     
 
     
@@ -103,7 +156,7 @@
     	</ol>
     
     
-
+-->
     
     <h2>課程要求/評分標準 Course requirements/Grading standards</h2><br>
     
@@ -121,7 +174,7 @@
         </ul>
     
 
-    
+   
     <h2>本課程附件 Course attachments</h2>
     
 
@@ -129,11 +182,12 @@
     N/A<br><br><br><br><br><br></td> 
     </p>
     </div><!--middle-->
+    </div><!--col-->
 
    
    
   
-
+  <div class="col-md-3">
   <div id="rightone">
   <table>
     <tr>
@@ -178,15 +232,15 @@
 
   </table>
   </div><!--rightone-->
+  </div><!--col-->
 
-</div><!--tablerow-->
+  <div class="col-md-1"><p></p></div>
+
+</div><!--row-->
 </div><!--allcontent-->
-
-</div><!--allthings-->
-
+</div>
 
 <footer>
-    <br>
 </footer>
 
  </body>
