@@ -1,0 +1,146 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>註冊</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/signUpcss.css">
+  <script type="text/javascript" src="js/key.js"></script>
+  <script type="text/javascript" src="js/signUp.js"></script>
+  <script>
+
+
+    //### Step 3 : 註冊
+    $(document).on('submit','#signUpForm',function(e){
+      e.preventDefault();  // 避免 form submit 完成後 轉址
+      var user = new Parse.User();
+      user.set("username", $('#username').val());
+      user.set("gender", $('#gender').val());
+      //user.set("sex", $('#sex opstion:select').val());
+      //data.sex = $("#sex option:selected").val();
+      user.set("email",    $('#email').val());
+      user.set("password", $('#password').val());
+      // username ,email , passwod 一定都要有
+      //input:checked//替換成$
+      user.set("job", $('input:checked').val());
+
+      user.set("phone",    $('#phone').val());
+
+      user.signUp(null,{
+        success : function(user){     // 註冊成功後會執行的 callback
+          console.log(user);
+          alert("使用者註冊成功");
+          window.location="index.html" ;
+        },
+        error : function(course,error){ // 註冊失敗後會執行的 callback
+          console.log(error) ;
+          alert(error.message);
+        }
+      });//endof signUp
+
+    });  //endof signUpBtn onSubmit
+    //## Step 3 end
+    
+  var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+  alert("yay! it worked");
+});
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <form id="signUpForm" class="form-horizontal">
+      <fieldset>
+
+      <!-- Form Name -->
+      <legend>註冊</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="username">username*</label>
+        <div class="col-md-4">
+        <input id="username" name="username" type="text" placeholder="username" class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+      <!-- Gender input-->
+      <!--
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="sex">sex*</label>
+        <div class="col-md-4">
+        <select name="sex" id="sex">
+          <option value="male" placeholder="sex" class="form-control input-md" required="">Male</option>
+          <option value="female" placeholder="sex" class="form-control input-md" required="">Female</option>
+          <option value="none" placeholder="sex" class="form-control input-md" required="">I have no idea</option>
+        </select>
+
+        </div>
+      </div>
+      -->
+
+      <!-- teacher or student (job) input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="job">I am*</label>
+        <div class="col-md-4">
+        <label for="student">student</label>
+        <input id="student" name="job" type="radio" value="student" ><br>
+
+        <label for="teacher">teacher</label>
+        <input id="teacher" name="job" type="radio" value="teacher"><br>
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="email">email*</label>
+        <div class="col-md-4">
+        <input id="email" name="email" type="text" placeholder="email" class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+      <!-- Password input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="password">password*</label>
+        <div class="col-md-4">
+          <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="phone">phone</label>
+        <div class="col-md-4">
+        <input id="phone" name="phone" type="text" placeholder="phone" class="form-control input-md" required="">
+
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="signUpBtn"></label>
+        <div class="col-md-4">
+          <button id="signUpBtn" name="signUpBtn" class="btn btn-primary">註冊</button>
+        </div>
+      </div>
+
+      </fieldset>
+      </form>
+
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+body{
+	background-color: #B8E0D2;
+}
+
+header{
+	height: 100px;
+}
+
+header h1{
+	color: #F9627D;
+	font-size: 120px;
+	padding-left: 30px;
+	text-shadow:0px 0px 8px gray;
+}
+
+#showWeather{
+	padding-top: 30px;
+	padding-left: 100px;
+}
+
+#leftSide{
+	padding-left: 50px;
+	padding-top: 60px;
+}
+
+#forecast{
+	background-color: #809BCE;
+	padding: 20px;
+	margin-top: 60px;
+	box-shadow:0px 0px 8px gray;
+
+}
+
+#forecast h1{
+	padding-bottom: 20px;
+}
+
+#forecast p{
+	color: white;
+}
+

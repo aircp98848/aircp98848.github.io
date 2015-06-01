@@ -1,0 +1,45 @@
+body{
+	background-color: #CAE5CA;
+ 
+}
+
+header{
+	background-color: #CD5C5C;
+	width: 920px;
+	height: 30px;
+	color:white;
+	text-align: center;
+	font-size: 22px;
+}
+
+
+table{
+	background-color: #FFFFFF;
+	border: 1px solid gray;
+	border-collapse:collapse;
+}
+
+th{
+	color:#483D8B;
+}
+
+th,td{
+	border: 1px solid #ADD8E6;
+}
+
+#rightone{
+	width: 300px;
+	float: right;
+}
+
+#leftone{
+	width: 600px;
+	float: left;
+}
+
+#allcontent{
+	width: 910px;
+	margin-right: auto;
+	margin-left: auto;
+/*	margin:0px auto;*/
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Weather</title>
+  <meta charset="utf-8">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="weather.css">
+
+
+ </head>
+
+ <body>
+  
+  <header><h1>Taipei</h1></header>
+
+    <div class="col-md-4">
+    <div id="leftSide">
+
+
+  <!--dropdown-->
+  <!--Info buttons with dropdown menu-->
+
+        <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">北部 <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+
+                <li><a href="#">台北市 </a></li>
+                <li><a href="#">新北市 </a></li>
+                <li><a href="#">基隆市 </a></li>
+                <li><a href="#">桃園市 </a></li>
+                <li><a href="#">新竹市 </a></li>
+                <li><a href="#">宜蘭縣 </a></li>
+
+
+                
+                
+            </ul>
+        </div>
+
+
+        <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">中部 <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">台中市 </a></li>
+                <li><a href="#">台中市 </a></li>
+                <li><a href="#">苗栗縣 </a></li>
+                <li><a href="#">彰化縣 </a></li>
+                <li><a href="#">南投縣 </a></li>
+                <li><a href="#">雲林縣 </a></li>
+
+
+
+                
+                
+            </ul>
+        </div>
+
+
+        <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">南部 <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              
+                <li><a href="#">台南市 </a></li>
+                <li><a href="#">高雄市 </a></li>
+              
+                <li><a href="#">嘉義市 </a></li>
+                <li><a href="#">嘉義縣 </a></li>
+                <li><a href="#">屏東縣 </a></li>
+                
+
+
+                
+                
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">東部和離島 <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              
+                <li><a href="#">花蓮縣 </a></li>
+                <li><a href="#">台東縣 </a></li>
+              
+                <li><a href="#">澎湖縣 </a></li>
+                <li><a href="#">金門縣 </a></li>
+                <li><a href="#">連江縣 </a></li>
+                
+
+
+                
+                
+            </ul>
+        </div>
+
+
+
+    <div id="showWeather">
+      <div id="cityName"></div>
+      <canvas id="today" width="150" height="150"></canvas>
+      <h3></h3>
+      <div id="weather"></div>
+    </div>
+  </div>
+    </div>
+
+
+  <div class="col-md-6">
+    <div id="forecast">
+      <h1>Forecast</h1>
+      <table class="table">
+        <thead>
+          <tr>
+           <th id="date1"></th>
+           <th id="date2"></th>
+           <th id="date3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <figure class="icons">
+            <td><canvas id="day1" width="64" height="64">Clear</canvas></td>
+            <td><canvas id="day2" width="64" height="64">Mostly Sunny</canvas></td>
+            <td><canvas id="day3" width="64" height="64">Mostly Cloudy</canvas></td>
+            </figure>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://darkskyapp.github.io/skycons/skycons.js"></script>
+  <script src="myapp.js"></script> 
+  <script src="simpleWeather/jquery.simpleWeather.js"></script>
+
+  <!--weather search-->
+  <script src="https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D2306179&format=json&diagnostics=true&callback=weatherSearch"></script>
+
+  <script src="http://weather.yahooapis.com/forecastrss?w=2442047&u=c>
+  </script>
+
+
+ </body>
+ </html>
