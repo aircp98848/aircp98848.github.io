@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>個人頁面</title>
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/css.css">
+
+  <!--引入初始化 Parse 的 js 檔案-->
+  <script type="text/javascript" src="<!--引入初始化 Parse 的 js 檔案-->"></script>
+  <script  type="text/javascript">
+  
+    $(document).ready(function(){
+      var job = Parse.Object.extend("job") ;
+      /* 顯示登入者名稱，避免未登入者進入此頁面*/
+          //提示 1 : 可用轉址的方式，讓未登入的使用者轉址到 logIn.html
+          current.get("job") == "teacher" ? window.location = 'login.html' : alert(老師only);
+          //提示 2 : 請在 <span id="name" > 中顯示使用者名稱，在 <span id="role">中顯示角色  
+      
+    });
+  
+    $(document).on('click',"#logOut",function(){
+      console.log("Logout clicked");
+      /* 執行登出動作，並轉址到 logIn 頁面*/
+        // 可參考 : https://parse.com/docs/js/guide#users-current-user
+
+      /* 結束 */
+    });
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h2>你是已經簽到的<span id="role"></span>：<span id="name"></span></h2>
+      <div id="logOut" class="btn btn-danger">登出</div>
+      <a class="btn" href="attendantList.html">老師頁面</a>
+    </div>
+  </div>
+</body>
+</html>
