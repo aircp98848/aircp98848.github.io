@@ -16,8 +16,14 @@
   $(document).on('submit','#logInForm',function(e){
     e.preventDefault();  // 避免 form submit 完成後 轉址
     console.log ("login") ;
+
+      var user = Parse.Object.extend("user") ;
+      var user = new Parse.User();
+
     var username = $('#username').val() ;
     var password = $('#password').val() ;
+
+        user.set("username",name);
 
 
     // 用 Parse.User.current() 判定使用者是否是登入的狀態，這裏還沒登入，會是 null
@@ -26,9 +32,9 @@
     Parse.User.logIn( username , password , {
       success: function(user) {
         // 到 console 看看 Parse.User.current()  的東西
-        console.log("登入之後的 Parse.User.current()  : ", parse.User.current()/*請完成程式碼部分*/) ;
+    //    console.log("登入之後的 Parse.User.current()  : ", parse.User.current()/*請完成程式碼部分*/) ;
         alert('登入成功') ;
-        window.location = 'courseList.html' ;
+        window.location = 'logIn.html' ;
       },
       error: function(user, error) {
         console.log(error) ;
@@ -75,10 +81,11 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="signUpBtn"></label>
         <div class="col-md-4">
-          <button id="signUpBtn" name="signUpBtn" class="btn btn-primary">登入</button>
+          <button id="signUpBtn" name="signUpBtn" class="btn btn-primary" onclick="courseList.html">登入</button>
           <a href="signUp.html" class="btn">前往 註冊頁面</a>
         </div>
       </div>
+
 
       </fieldset>
       </form>

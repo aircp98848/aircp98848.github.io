@@ -17,9 +17,9 @@
     //### Step 3 : 註冊
     $(document).on('submit','#signUpForm',function(e){
       e.preventDefault();  // 避免 form submit 完成後 轉址
+      var user = Parse.Object.extend("user") ;
       var user = new Parse.User();
       user.set("username", $('#username').val());
-      user.set("gender", $('#gender').val());
       //user.set("sex", $('#sex opstion:select').val());
       //data.sex = $("#sex option:selected").val();
       user.set("email",    $('#email').val());

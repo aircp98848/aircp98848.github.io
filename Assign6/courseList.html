@@ -16,12 +16,17 @@
 
  //### Step 2 : 抓取所有課程
   $(document).ready(function(){
-    var Course = Parse.Object.extend("Course") ;
-    var allCourseQuery = new Parse.Query(Course)      // 創建 Course Query
+    var Course = Parse.Object.extend("user") ;
+    var allCourseQuery = new Parse.Query(user)      // 創建 Course Query
+    var user = new Parse.User();
+
+    var job = Parse.Object.extend("job") ;
 
     // 完成以下部分
     allCourseQuery.find({
       success: function(CourseArray) {
+        current.get("job") == "teacher" ? window.location = 'login.html' : alert(老師only);
+
         console.log(CourseArray);
 
         // Step 3 : 顯示課程資料
@@ -29,15 +34,16 @@
           course = CourseArray[i] ;
           View.addRow(
             course.id, // 加入 id 資料 進入 HTML，看看 View.addRow 做了麼修改
-            course.get('name'),
-            course.get('time'),
-            course.get('credit')
+            user.get('username'),
           );
         }
       },
       error: function(error) {
+
         console.log(error) ;
         alert(error.message);
+
+        //current.get("job") == "teacher" ? window.location = 'login.html' : alert(老師only);
       }
     });
   });
@@ -48,22 +54,19 @@
 <body>
   <div class="container">
     <div class="row">
-      <h2>課程清單</h2>
+      <h2>簽到記錄</h2>
     </div>
   </div>
   <div class="container">
     <div class="row">
       <table id="table" class="table table-striped">
         <tr>
-            <td>名稱</td>
-            <td>時間</td>
-            <td>學分數</td>
-            <td class="favorite">最愛</td>
+            <td>姓名</td>
         </tr>
       </table>
     </div>
     <div class="row">
-      <a href="addCourse.html" class="btn btn-success">前往 新增課程</a>
+      <a href="login.html" class="btn btn-success">回到 登入畫面</a>
       </div>
 </body>
 
