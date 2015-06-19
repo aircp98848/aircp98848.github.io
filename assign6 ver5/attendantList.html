@@ -1,0 +1,83 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>老師頁面</title>
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/css.css">
+
+  <!--引入初始化 Parse 的 js 檔案-->
+  <script type="text/javascript" src="js/key.js"></script>
+  <script  type="text/javascript">
+    $(document).ready(function(){
+      console.log('document ready');
+      /*
+      var roleACL = new Parse.ACL();
+      roleACL.setPublicReadAccess(true);
+      var role = new Parse.Role("Teacher", roleACL);
+      role.save();
+      */
+      var currentUser = Parse.User.current();
+      if(!currentUser){
+        alert("您尚未登入, 轉至登入頁面");
+        window.location = 'logIn.html';
+        return null;
+      }
+      else if(currentUser.get("role") != "teacher"){
+        alert("此頁面限老師瀏覽, 即將轉址");
+        window.location = 'index.html';
+        return null;
+      }
+      var WebUser = Parse.Object.extend("User");
+      var attend = new Parse.Query(WebUser);
+      attend.equalTo("role", "student");
+      attend.find({
+        success : function(Array){
+          console.log('result', Array);
+          for(var i = 0 ; i < Array.length ; i++){
+            var list = '<tr><td>' + Array[i].get('username') + '</td></tr>';
+            $('#table').append(list);
+          }
+        },
+        error : function(error){
+          console.log(error);
+          alert(error.message);
+        }
+      });
+
+
+
+
+      /* 要判斷使用者角色，避免不應該看到的人進到此頁面 */
+        // 提示 1 : 將非老師的角色轉址到 index 頁面
+        // 提示 2 : 將未登入的使用者轉指導 logIn 頁面
+
+      /* 請閱讀完 html 後在這裡填入送出表單後需要執行的程式碼 */
+        // 提示 1 : 挑選符合條件的使用者
+        //         可參考https://parse.com/docs/js/guide#queries-query-constraints
+        // 提示 2 : 可使用 jqeury 中的 append 方法將資料顯示在<table id="table">中
+
+      /* 結束*/
+    }); // end of document ready
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h2>老師頁面<a href="index.html" class="btn">個人頁面</a></h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <table id="table" class="table table-striped">
+        <tr>
+          <td>已出席學生</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
