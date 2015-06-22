@@ -20,9 +20,6 @@
     var password = $('#password').val() ;
 
   //create an attendantlist
-    var Attendantlist = Parse.Object.extend("Attendantlist") ;
-    var Attendantlist = new Attendantlist();
-    //Attendantlist.set("username",username);
 
 
     // 用 Parse.User.current() 判定使用者是否是登入的狀態，這裏還沒登入，會是 null
@@ -36,10 +33,16 @@
         // 到 console 看看 Parse.User.current()  的東西
         console.log("登入之後的 Parse.User.current()  : ",Parse.User.current()) ;
         alert('登入成功') ;
+        alert('簽到成功') ;
 
-        Attendantlist.set("username",username);
 
         window.location = 'index.html' ;
+
+        
+
+      //
+
+
       },
       error: function(user, error) {
         console.log(error) ;

@@ -13,6 +13,10 @@
   <script  type="text/javascript">
     $(document).ready(function(){
       console.log('document ready');
+      var roleACL = new Parse.ACL();
+      roleACL.setPublicReadAccess(true);
+      var role = new Parse.Role("Teacher", roleACL);
+      role.save();
       
       /* 要判斷使用者角色，避免不應該看到的人進到此頁面 */
         // 提示 1 : 將非老師的角色轉址到 index 頁面
@@ -22,6 +26,9 @@
         // 提示 1 : 挑選符合條件的使用者
         //         可參考https://parse.com/docs/js/guide#queries-query-constraints
         // 提示 2 : 可使用 jqeury 中的 append 方法將資料顯示在<table id="table">中
+
+        User.query.notEqualTo("job", "student");
+        window.location = 'index.html' ;
 
       /* 結束*/
     }); // end of document ready
