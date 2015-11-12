@@ -1,0 +1,366 @@
+header{
+	width:100%;
+	height:45px;
+	background:#ACDCCE;
+	opacity:0.8;
+	margin:0 auto;
+	position:fixed;
+	top:0;
+	box-shadow: 0 2px 3px #aaa;
+	z-index:10001;
+}
+header ul{
+	width:100%;
+	margin-top:5px;
+}
+header ul li{
+	display:inline-block;
+	font-size:20px;
+	color:#fff;
+}
+header ul li a{
+	color:#fff;
+}
+header ul li a:hover{
+	transition: 500ms;
+	text-decoration:none;
+	color:#fff;
+}
+header p{
+	font-size:40px;
+	color:#fff;
+}
+body,h2{
+	font-family: Meiryo;	
+}
+.homeBody{
+	background-image:url("pic/bg.jpg");
+	background-attachment:fixed;
+	background-position:50% 0%;
+	margin:0;
+	overflow-x:hidden;
+	overflow-y:auto;
+	font-size:18px;
+}
+body a{
+	color:#aaa;
+}
+body a:link { 
+	text-decoration: none;color: #fff;
+}
+body a:active { 
+	text-decoration:blink;
+}
+body a:hover { text-decoration:none;color: #fff;
+} 
+body a:visited { text-decoration: none;color: #fff;
+}
+p{
+font-family: Meiryo;
+}
+#enter{
+	width:300px;
+	height:300px;
+	position:relative;
+	top:23%;
+	margin:0 auto;
+	opacity:1;
+	border-radius:50%;
+	box-shadow: 0 3px 2px #aaa;
+	
+}
+
+.logo{
+	height:30px;
+	
+}
+.icon{
+	position:relative;
+	left:68%;
+	display:inline-block;
+	width:30px;
+	margin-right:15px;
+}
+.dropdown-toggle{
+	color:#fff;
+}
+
+.cellDiv{
+/*	display:inline-block;*/
+	width:19vw;
+	height:22vh;
+/*	margin:0.5vw;*/
+/*	float:left;*/
+}
+.footer{
+	position:fixed;
+	bottom:0;
+	margin:0 auto;
+	
+}
+#footerPic1{
+	position:absolute;
+	top:12%;
+	right:10%;
+}
+#footerPic2{
+	position:absolute;
+	top:50%;
+	left:12%;
+}
+#footerPic3{
+	position:absolute;
+	top:70%;
+	right:20%;
+}
+#footerPic4{
+	position:absolute;
+	top:20%;
+	left:7%;
+}
+#footerPic5{
+	position:absolute;
+	top:45%;
+	right:7%;
+}
+
+.userPic{
+	display:inline-block;
+	width: 130px; 
+	height: 130px; 
+	border-radius: 50%; 
+	background-size:130px 130px;
+	background-image:url('pic/user.jpg'); 
+	background-repeat: no-repeat;
+}
+.profile{
+	display:inline-block;
+	position:relative;
+	width:300px;
+	top:50px;
+}
+.username{
+	width:100px;
+	position:relative;
+	left:30px;
+	font-size:2em;
+}
+.progressDiv{
+	width:250px;
+	height:300px;
+	float:left;
+	border-radius:10px;
+	margin-top:1%;
+}
+.progress{
+	display:inline-block;
+	position:relative;
+	left:5%;
+	width:400px;
+}
+.glyphicon-star{
+	float:left;
+}
+.pageW{
+	height:100vh;
+	background-color:#fff;
+}
+.pageG{
+	height:100vh;
+	background-color:#ACDCCE;
+}
+.blank{
+	height:40px;
+}
+.courseSelector{
+	width:20px;
+	height:130px;
+	position:fixed;
+	top:30%;
+	left:5%;
+	z-index:10000;
+}
+.selectorCircle{
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	background-color:#F4ACB7;
+	margin-top:20px;
+	margin-left:80%;
+}
+.selectorCircleBig{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	background-color:#F4ACB7;
+	margin-top:20px;	
+}
+.selectorCircle:hover{
+	opacity:0.7;
+}
+.selectorCircleBig:hover{
+	opacity:0.7;
+}
+.courseContent{
+	width:100vw;
+	height:100vh;
+}
+.courseContentRight{
+	display:inline-block;
+	position:absolute;
+	top:10%;
+	right:12%;
+	width:250px;
+}
+.courseContentLeft{
+	display:inline-block;
+	position:absolute;
+	top:10%;
+	left:15%;
+}
+.progressForm{
+	border:solid; 
+	border-width:1px;
+	border-color:#aaa;
+	border-radius:5px;
+	width:250px;
+	margin:0 auto;
+	padding:1em;
+
+}
+.testLink{
+	background-color:#ACDCCE;
+	border-radius:5px;
+	margin:1em;
+	padding:10px;
+}
+
+
+.d-menu li{
+	background-color:#CBDBD0;
+	width:100px;
+}
+.d-menu li:hover{
+	background-color:#ACDCCE;
+}
+
+.dropdown-toggle{
+	width:30px;
+	height:30px;
+	background-image:url('pic/Menu.png');
+}
+
+
+.btn {
+  background-color: #61cfa1;
+  border-color: #61cfa1;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+  background-color: #4dc995;
+  border-color: #3bc28a;
+}
+.btn.disabled:hover,
+.btn.disabled:focus,
+.btn.disabled:active,
+.btn.disabled.active,
+.btn[disabled]:hover,
+.btn[disabled]:focus,
+.btn[disabled]:active,
+.btn[disabled].active,
+fieldset[disabled] .btn:hover,
+fieldset[disabled] .btn:focus,
+fieldset[disabled] .btn:active,
+fieldset[disabled] .btn.active {
+  background-color: #61cfa1;
+  border-color: #61cfa1;
+}
+.formPos{
+	margin:0 auto;
+	position:relative;
+	top:20%;
+}
+.divide{
+	position:relative;
+	width:700px;
+	top:20%;
+	margin:0 auto;
+}
+.member{
+	border-radius:50%;
+	width:150px;
+	height:150px;
+}
+.memberCard{
+	width:170px;
+	display:inline-block;
+}
+.bar{
+	transition: ease width 3s;
+}
+.fixPic{
+	position:fixed;
+	height:600px;	
+	z-index:10000;
+}
+.fixPic2{
+	position:fixed;
+	height:100px;	
+	z-index:10000;
+}
+.girlDiv{
+	position:absolute;
+	right:10%;
+}
+.birdDiv{
+	position:absolute;
+	left:1%;
+	top:70%;
+}
+#imgFile{
+	width:130px; 
+	height:130px; 
+	opacity:0;
+}
+.userPic:hover{
+	opacity:0.5;
+}
+.courseName{
+	position:relative;
+	left:8%;
+	margin:0 auto;
+	font-size:90px;
+	color:#F49797;
+}
+.modalProgressTitle{
+	font-family: Meiryo;	
+	color:#F4ACB7;
+}
+.tip{
+	border:solid; 
+	border-width:1px;
+	border-color:#aaa;
+	border-radius:5px;
+	padding:1em;
+}
+.tryDiv{
+	position:absolute;
+	left:35%;
+	top:10%;
+	
+}
+.back{
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	background-color:#F4ACB7;
+	margin-top:20px;
+	top:40%;
+	left:10%;	
+}
+.back:hover{
+	opacity:0.7;
+}
+
